@@ -1,0 +1,506 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none !important;
+    text-transform: capitalize;
+}
+
+/* variables */
+:root {
+    --text-main-color: #ffff;
+    --text-secondary-color: #0e0e0e;
+    --background-main-color: rgb(255, 255, 255);
+    --background-secondary-color: #000;
+    --cards-color: #f4f4f4;
+    --main-color: #f6b921;
+    --hover-color: #f6b921;
+    --shadow-first-background-color: #00000097;
+    --shadow-second-background-color: #00000054;
+    --transation: 0.3s;
+    --margin-top-large: 90px;
+    --margin-top-small: 75px;
+    --border-radius: 8px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* start header */
+.navigation {
+    background-image: url("images/ROVSLIDERT.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:calc(100vh + 100px);
+}
+
+.navbar {
+    background-color: var(--shadow-first-background-color) !important;
+}
+
+.navbar-brand {
+    color: var(--text-main-color) !important;
+}
+
+.navbar-brand span {
+    padding-left: 4px !important;
+    font-weight: 700;
+    transition: var(--transation) !important;
+}
+
+.navbar-brand span:hover {
+    color: var(--hover-color) !important;
+}
+
+.nav-item {
+    padding-left: 8px !important;
+    font-weight: 600;
+}
+
+.nav-link {
+    color: var(--text-main-color) !important;
+    transition: var(--transation) !important;
+}
+
+.nav-link:hover {
+    color: var(--hover-color) !important;
+}
+
+.fa-solid {
+    color: var(--text-main-color) !important;
+    font-size: 28px;
+}
+
+.dropdown-menu {
+    text-align: center;
+    padding: 16px;
+    font-size: 18px;
+    border-radius: var(--border-radius) !important;
+    background-color: var(--shadow-first-background-color) !important;
+    z-index: 1;
+}
+
+.dropdown-item {
+    font-weight: 600;
+    transition: var(--transation) !important;
+    color: var(--background-main-color) !important;
+}
+
+.dropdown-item:hover {
+    background-color: transparent !important;
+    color: var(--hover-color) !important;
+}
+
+/* end header */
+/* start footer */
+.footer {
+    margin-top: var(--margin-top-large) !important;
+    background-color: #343434 !important;
+    color: var(--background-main-color) !important;
+}
+
+.footer .Grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 45px;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer .Grid .FirstoneGrid h3 {
+    font-size: 22px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: var(--main-color);
+}
+
+.footer .Grid .FirstoneGrid span:nth-child(1) .fa-solid {
+    font-size: 18px;
+    padding-right: 12px;
+    color: var(--main-color) !important;
+
+}
+
+.footer .Grid .FirstoneGrid span:nth-child(2) {
+    color: var(--text-main-color) !important;
+    font-size: 12px;
+}
+
+.footer .Grid .FirstoneGrid a {
+    color: var(--text-main-color) !important;
+    transition: var(--transation);
+}
+
+.footer .Grid .FirstoneGrid a:hover {
+    color: var(--hover-color) !important;
+}
+
+.FirstoneGrrid .imagde img {
+    margin-top: -12px;
+    height: 250px;
+}
+
+.FirstoneGrrid .all {
+
+    margin-top: -15px !important;
+    background-color: transparent !important;
+    margin-left: -16px !important;
+}
+
+.FirstoneGrrid {
+    text-align: center !important;
+}
+
+.FirstoneGrrid .all span {
+    padding-left: 12px !important;
+
+}
+
+.FirstoneGrrid .all span a {
+    border-radius: 50% !important;
+    background-color: var(--background-main-color) !important;
+    color: var(--main-color) !important;
+    padding: 12px !important;
+    font-size: 15px !important;
+}
+
+.holine hr {
+    background-color: var(--background-main-color) !important;
+}
+
+.foot .ends {
+    display: flex;
+    padding-right: 20px;
+}
+
+.foot .ends a {
+    color: var(--text-main-color) !important;
+    transition: var(--transation) !important;
+}
+
+.foot .ends a:hover {
+    color: var(--main-color) !important;
+}
+
+/* end footer */
+/* extra small screens */
+@media only screen and (max-width: 600px) {
+
+    /* start header */
+    .navigation {
+        background-size: contain !important;
+
+    }
+
+    .nav-item {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        font-size: 24px;
+    }
+
+    .dropdown-menu {
+        padding: 6px;
+    }
+
+    /* end header */
+    /* start footer */
+
+    .footer .Grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
+    }
+
+    .FirstoneGrrid .imagde img {
+        margin-top: -12px;
+        height: 150px;
+    }
+
+    .FirstoneGrrid .all {
+
+        margin-top: -15px !important;
+        background-color: transparent !important;
+        margin-left: -16px !important;
+    }
+
+    .FirstoneGrrid {
+        text-align: center !important;
+    }
+
+    .FirstoneGrrid .all span {
+        padding-left: 12px !important;
+
+    }
+
+    .FirstoneGrrid .all span a {
+        border-radius: 50% !important;
+        background-color: var(--background-main-color) !important;
+        color: var(--main-color) !important;
+        padding: 12px !important;
+        font-size: 15px !important;
+    }
+
+    .holine hr {
+        background-color: var(--background-main-color) !important;
+    }
+
+    .foot .ends {
+        display: flex;
+        padding-right: 20px;
+    }
+
+    .foot .ends a {
+        color: var(--text-main-color) !important;
+        transition: var(--transation) !important;
+    }
+
+    .foot .ends a:hover {
+        color: var(--main-color) !important;
+    }
+
+    /* end footer */
+}
+
+/* small screen */
+@media (min-width:601px) and (max-width:767px) {
+
+    /* start header */
+    /* .navigation {
+        height: 596px !important;
+
+    } */
+
+    .nav-item {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        font-size: 24px;
+    }
+
+    .sectionByGrid {
+        margin-top: var(--margin-top-small) !important;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 50px;
+        height: 500px;
+    }
+
+    .sectionOne {
+        text-align: center !important;
+    }
+
+    .sectionOne h2 {
+        text-align: center !important;
+
+    }
+
+    .sectionOne p {
+        text-align: center !important;
+
+    }
+
+    /* end header */
+
+    .footer .Grid {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .footer .Grid .FirstoneGrid h3 {
+        font-size: 22px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: var(--main-color);
+    }
+
+    .footer .Grid .FirstoneGrid span:nth-child(1) .fa-solid {
+        font-size: 18px;
+        padding-right: 12px;
+        color: var(--main-color) !important;
+
+    }
+
+    .footer .Grid .FirstoneGrid span:nth-child(2) {
+        color: var(--text-main-color) !important;
+        font-size: 12px;
+    }
+
+    .footer .Grid .FirstoneGrid a {
+        color: var(--text-main-color) !important;
+        transition: var(--transation);
+    }
+
+    .footer .Grid .FirstoneGrid a:hover {
+        color: var(--hover-color) !important;
+    }
+
+    .FirstoneGrrid .imagde img {
+        margin-top: -12px;
+        height: 250px;
+    }
+
+    .FirstoneGrrid .all {
+
+        margin-top: -15px !important;
+        background-color: transparent !important;
+        margin-left: -16px !important;
+    }
+
+    .FirstoneGrrid {
+        text-align: center !important;
+    }
+
+    .FirstoneGrrid .all span {
+        padding-left: 12px !important;
+
+    }
+
+    .FirstoneGrrid .all span a {
+        border-radius: 50% !important;
+        background-color: var(--background-main-color) !important;
+        color: var(--main-color) !important;
+        padding: 12px !important;
+        font-size: 15px !important;
+    }
+
+    .holine hr {
+        background-color: var(--background-main-color) !important;
+    }
+
+    .foot .ends {
+        display: flex;
+        padding-right: 20px;
+    }
+
+    .foot .ends a {
+        color: var(--text-main-color) !important;
+        transition: var(--transation) !important;
+    }
+
+    .foot .ends a:hover {
+        color: var(--main-color) !important;
+    }
+
+}
+
+/* medium screens */
+@media (min-width:768px) and (max-width:791px) {
+
+    /* start header */
+    .navigation {
+        background-size: contain !important;
+
+    }
+
+    .nav-item {
+        font-size: 18px !important;
+    }
+
+    .sectionByGrid {
+        margin-top: var(--margin-top-small) !important;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .sectionOne {
+        text-align: center !important;
+    }
+
+    .sectionOne h2 {
+        text-align: center !important;
+
+    }
+
+    .sectionOne p {
+        text-align: center !important;
+        font-size: 20px !important;
+
+    }
+
+    /* end header */
+
+}
+
+/*  large screens */
+@media (min-width:792px) and (max-width:940px) {
+    .navigation {
+        background-size: cover !important;
+
+    }
+
+    .navbar-brand span {
+        font-size: 24px !important;
+    }
+
+    .nav-item {
+        font-size: 20px !important;
+    }
+
+    .sectionByGrid {
+        margin-top: var(--margin-top-small) !important;
+        grid-template-columns: repeat(1, 1fr);
+        height: 500px;
+    }
+
+    .sectionOne {
+        text-align: center !important;
+    }
+
+    .sectionOne h2 {
+        text-align: center !important;
+
+    }
+
+    .sectionOne p {
+        text-align: center !important;
+        font-size: 20px !important;
+
+    }
+}
+/* @media (min-width:941px) and (max-width:1024px) {
+    .navigation {
+        background-size: cover !important;
+
+    }
+} */
+/* extra large screens */
+@media (min-width:1400px) and (max-width:2500px) {
+    .navbar-brand span {
+        font-size: 40px !important;
+    }
+
+    .navbar-brand img {
+        width: 70px;
+    }
+
+    .nav-item {
+        padding-left: 18px !important;
+        font-size: 35px !important;
+    }
+
+    .dropdown-menu {
+        padding: 22px;
+        font-size: 28px;
+    }
+
+    /* start our team */
+    .sectionByGrid {
+        gap: 80px;
+    }
+
+    .sectionOne h2 {
+        font-size: 45px;
+    }
+
+    .sectionOne p {
+        font-size: 20px;
+    }
+
+    .sectionTwo img {
+        height: 500px;
+        width: 100%;
+    }
+
+    /* end our team */
+}
