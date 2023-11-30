@@ -419,7 +419,7 @@ body {
 }
 
 /*  large screens */
-@media (min-width:792px) and (max-width:942px) {
+@media (min-width:792px) and (max-width:940px) {
     .navigation{
         background-size: contain;
     }
