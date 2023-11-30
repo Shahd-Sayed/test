@@ -192,7 +192,6 @@ body {
     /* start header */
     .navigation {
         background-size: contain !important;
-
     }
 
     .nav-item {
@@ -452,7 +451,11 @@ body {
 
     }
 }
-
+@media (min-width:1024px) and (max-width:1200px) {
+    .navigation{
+        background-size: contain;
+    }
+}
 /* extra large screens */
 @media (min-width:1385px) and (max-width:2500px) {
  
