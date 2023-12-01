@@ -16,7 +16,6 @@
     --background-secondary-color: #000;
     --cards-color: #f4f4f4;
     --main-color: #f6b921;
-    --hover-color: #f6b921;
     --shadow-first-background-color: #00000097;
     --shadow-second-background-color: #00000054;
     --transation: 0.3s;
@@ -30,13 +29,7 @@ body {
 }
 
 /* start header */
-.navigation {
-    background-image: url("images/ROVSLIDERT2.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: calc(100vh + 500px);
-    width: 100%;
-}
+
 
 .navbar {
     background-color: var(--shadow-first-background-color) !important;
@@ -46,6 +39,10 @@ body {
     color: var(--text-main-color) !important;
 }
 
+.navbar-brand img {
+    width: 30px !important;
+}
+
 .navbar-brand span {
     padding-left: 4px !important;
     font-weight: 700;
@@ -53,21 +50,23 @@ body {
 }
 
 .navbar-brand span:hover {
-    color: var(--hover-color) !important;
+    color: var(--main-color) !important;
 }
 
 .nav-item {
     padding-left: 8px !important;
-    font-weight: 600;
 }
 
 .nav-link {
     color: var(--text-main-color) !important;
     transition: var(--transation) !important;
+    font-size: 18px !important;
+    font-weight: 600;
+
 }
 
 .nav-link:hover {
-    color: var(--hover-color) !important;
+    color: var(--main-color) !important;
 }
 
 .fa-solid {
@@ -92,7 +91,7 @@ body {
 
 .dropdown-item:hover {
     background-color: transparent !important;
-    color: var(--hover-color) !important;
+    color: var(--main-color) !important;
 }
 
 /* end header */
@@ -101,6 +100,7 @@ body {
     margin-top: var(--margin-top-large) !important;
     background-color: #343434 !important;
     color: var(--background-main-color) !important;
+    height: 65vh;
 }
 
 .footer .Grid {
@@ -136,74 +136,135 @@ body {
 }
 
 .footer .Grid .FirstoneGrid a:hover {
-    color: var(--hover-color) !important;
+    color: var(--main-color) !important;
 }
 
 .FirstoneGrrid .imagde img {
-    margin-top: -12px;
-    height: 250px;
+    margin-top: -18px;
+    height: 240px;
 }
 
 .FirstoneGrrid .all {
-
     margin-top: -15px !important;
     background-color: transparent !important;
     margin-left: -16px !important;
+
 }
 
-.FirstoneGrrid {
-    text-align: center !important;
-}
 
-.FirstoneGrrid .all span {
+.FirstoneGrrid .all span:nth-child(2),
+:nth-child(3),
+:nth-child(4) {
     padding-left: 12px !important;
 
 }
 
-.FirstoneGrrid .all span a {
+.FirstoneGrrid .all span .fa-brands {
+    font-size: 22px !important;
+    text-align: center;
     border-radius: 50% !important;
     background-color: var(--background-main-color) !important;
     color: var(--main-color) !important;
-    padding: 12px !important;
-    font-size: 15px !important;
+    padding: 14px !important;
+    transition: var(--transation);
+}
+
+.FirstoneGrrid .all span .fa-brands:hover {
+    background-color: var(--main-color) !important;
+    color: var(--background-main-color) !important;
 }
 
 .holine hr {
     background-color: var(--background-main-color) !important;
 }
-
-.foot .ends {
-    display: flex;
-    padding-right: 20px;
+.foot{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
 }
-
 .foot .ends a {
     color: var(--text-main-color) !important;
     transition: var(--transation) !important;
+    font-size: 13px;
 }
 
 .foot .ends a:hover {
     color: var(--main-color) !important;
-}
-
+} 
 /* end footer */
 /* extra small screens */
 @media only screen and (max-width: 600px) {
+    .nav-item {
+        display: flex;
+        justify-content: center !important;
+        align-items: center;
+    }
+
+    /* start footer */
+    .footer {
+        height: calc(100vh + 200px);
+    }
+
+    .footer .Grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .FirstoneGrrid .all {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 12px;
+
+    }
+    .FirstoneGrrid .all span:nth-child(2),
+    :nth-child(3),
+    :nth-child(4) {
+        padding-left: 0px !important;
+
+    }
+    .FirstoneGrrid .imagde img {
+        margin-top: -18px;
+        height: 195px;
+    }
+ .FirstoneGrrid .all span .fa-brands {
+        font-size: 18px !important;;
+        padding: 12px !important;
+    }
+
+    .foot{
+        grid-template-columns: repeat(1,1fr);
+    }
 }
 
 /* small screen */
 @media (min-width:601px) and (max-width:767px) {
+    .nav-item {
+        display: flex;
+        justify-content: center !important;
+        align-items: center;
+    }
+
+    .nav-link {
+        font-size: 24px !important;
+    }
 }
 
 /* medium screens */
-@media (min-width:768px) and (max-width:791px) {
-}
+@media (min-width:768px) and (max-width:791px) {}
 
 /*  large screens */
-@media (min-width:792px) and (max-width:940px) {
-}
-@media (min-width:1024px) and (max-width:1200px) {
-}
+@media (min-width:792px) and (max-width:940px) {}
+
 /* extra large screens */
-@media (min-width:1385px) and (max-width:2500px) {
+@media (min-width:1305px) and (max-width:2500px) {
+    .navbar-brand {
+        font-size: 32px !important;
+    }
+
+    .navbar-brand img {
+        width: 50px !important;
+    }
+
+    .nav-link {
+        font-size: 28px !important;
+    }
 }
