@@ -106,7 +106,7 @@ body {
     margin-top: var(--margin-top-large) !important;
     background-color: #343434 !important;
     color: var(--background-main-color) !important;
-    padding: 12px;
+    /* padding: 12px; */
 }
 
 .footer .Grid {
@@ -151,9 +151,8 @@ body {
 }
 
 .FirstoneGrrid .all {
-    margin-top: -15px !important;
+    margin-top: -12px !important;
     background-color: transparent !important;
-    margin-left: -16px !important;
 
 }
 
@@ -161,17 +160,17 @@ body {
 .FirstoneGrrid .all span:nth-child(2),
 :nth-child(3),
 :nth-child(4) {
-    padding-left: 12px !important;
+    padding-left: 8px !important;
 
 }
 
 .FirstoneGrrid .all span .fa-brands {
-    font-size: 22px !important;
+    font-size: 18px !important;
     text-align: center;
     border-radius: 50% !important;
     background-color: var(--background-main-color) !important;
     color: var(--main-color) !important;
-    padding: 14px !important;
+    padding: 12px !important;
     transition: var(--transation);
 }
 
@@ -184,24 +183,13 @@ body {
     background-color: var(--background-main-color) !important;
 }
 .foot{
-    padding-left: 12px !important;
-}
-.ends{
     display: flex;
-    justify-content: end;
-    margin-top: -22px;
+    justify-content: center;
+    padding-bottom: 12px !important;
 }
-.foot .ends a {
-    color: var(--text-main-color) !important;
-    transition: var(--transation) !important;
-    font-size: 16px;
-    text-align: center !important;
-}
-
-.foot .ends a:hover {
+.foot span a{
     color: var(--main-color) !important;
-} 
-
+}
 /* end footer */
 /* extra small screens */
 @media only screen and (max-width: 600px) {
@@ -242,10 +230,6 @@ body {
         ;
         padding: 12px !important;
     }
-    .ends{
-        justify-content: start;
-        margin-top: 0px;
-    }
     /* end footer */
 }
 
@@ -260,77 +244,46 @@ body {
     .nav-link {
         font-size: 24px !important;
     }
+    .footer .Grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .FirstoneGrrid .all {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 12px;
+
+    }
+
+    .FirstoneGrrid .all span:nth-child(2),
+    :nth-child(3),
+    :nth-child(4) {
+        padding-left: 0px !important;
+
+    }
+
+    .FirstoneGrrid .imagde img {
+        margin-top: -18px;
+        height: 195px;
+    }
+
+    .FirstoneGrrid .all span .fa-brands {
+        font-size: 18px !important;
+        ;
+        padding: 12px !important;
+    }
+    /* end footer */
     
 }
 
 /* medium screens */
 @media (min-width:768px) and (max-width:791px) {
-        /* start footer */
 
-
-        .footer .Grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    
-        .FirstoneGrrid .all {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-    
-        }
-    
-        .FirstoneGrrid .all span:nth-child(2),
-        :nth-child(3),
-        :nth-child(4) {
-            padding-left: 0px !important;
-    
-        }
-    
-        .FirstoneGrrid .imagde img {
-            margin-top: -18px;
-            height: 195px;
-        }
-    
-        .FirstoneGrrid .all span .fa-brands {
-            font-size: 18px !important;
-            ;
-            padding: 12px !important;
-        }
-        /* end footer */
 }
 
 /*  large screens */
 @media (min-width:792px) and (max-width:1024px) {
-            /* start footer */
 
-
-            .footer .Grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        
-            .FirstoneGrrid .all {
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-        
-            }
-        
-            .FirstoneGrrid .all span:nth-child(2),
-            :nth-child(3),
-            :nth-child(4) {
-                padding-left: 0px !important;
-        
-            }
-        
-            .FirstoneGrrid .imagde img {
-                margin-top: -18px;
-                height: 195px;
-            }
-        
-            .FirstoneGrrid .all span .fa-brands {
-                font-size: 18px !important;
-                ;
-                padding: 12px !important;
-            }
-            /* end footer */
 }
 
 /* extra large screens */
