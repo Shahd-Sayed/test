@@ -29,7 +29,14 @@ body {
 }
 
 /* start header */
-
+.navigation {
+    background-image: url("images/ROVSLIDERT2.png");
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    min-height: 100vh;
+    /* calc(100vh + 500px); */
+    /* width: 100%; */
+}
 
 .navbar {
     background-color: var(--shadow-first-background-color) !important;
@@ -194,6 +201,10 @@ body {
 /* end footer */
 /* extra small screens */
 @media only screen and (max-width: 600px) {
+    .navigation{
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
     .nav-item {
         display: flex;
         justify-content: center !important;
@@ -237,6 +248,10 @@ body {
 
 /* small screen */
 @media (min-width:601px) and (max-width:767px) {
+    .navigation{
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
     .nav-item {
         display: flex;
         justify-content: center !important;
@@ -249,13 +264,32 @@ body {
 }
 
 /* medium screens */
-@media (min-width:768px) and (max-width:791px) {}
+@media (min-width:768px) and (max-width:791px) {
+    .navigation{
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
 
 /*  large screens */
-@media (min-width:792px) and (max-width:940px) {}
-
+@media (min-width:792px) and (max-width:1023px) {
+    .navigation{
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+@media (min-width:1024px) and (max-width:1305px) {
+    .navigation{
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
 /* extra large screens */
 @media (min-width:1305px) and (max-width:2500px) {
+    .navigation{
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
     .navbar-brand {
         font-size: 32px !important;
     }
